@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efecto 3D Interactivo Completo</title>
+    <style>
+      .img-container {
+        width: 300px;
+        margin: 50px auto;
+        perspective: 1000px;
+        padding: 20px;
+      }
+      .img-container img {
+        width: 100%;
+        transition: transform 0.2s ease-out; /* Suaviza el movimiento */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-container">
+      <img src="assets/code.png" alt="Ejemplo de imagen" id="tiltImage" />
+    </div>
+    <script>
+      container = document.querySelector(".img-container");
+      const image = document.getElementById("tiltImage");
+
+      container.addEventListener("mousemove", (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left; // Posición horizontal dentro del contenedor
+        const y = e.clientY - rect.top; // Posición vertical dentro del contenedor
+
+        const halfWidth = rect.width / 2;
+        const halfHeight = rect.height / 2;
+
+        // Calcula el ángulo según la posición del mouse
+        const rotateY = ((x - halfWidth) / halfWidth) * 15; // Rotación en Y (efecto de inclinación lateral)
+        const rotateX = -((y - halfHeight) / halfHeight) * 15; // Rotación en X (efecto de inclinación vertical)
+
+        // Para agregar un ligero giro en Z basado en la posición horizontal:
+        const rotateZ = ((x - halfWidth) / halfWidth) * 5;
+
+        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+      });
+
+      container.addEventListener("mouseleave", () => {
+        // Reinicia la transformación al salir el mouse
+        image.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+      });
+    </script>
+  </body>
+</html>
