@@ -361,8 +361,9 @@ footer {
 }
 
 .card .face.face1 h2{
-  margin: 0;
   padding: 0;
+  margin-bottom: 15px;
+  
 }
 
 .card .face.face1 .content{
