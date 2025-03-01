@@ -2,23 +2,6 @@ document.getElementById("hamburger").addEventListener("click", function () {
   document.getElementById("navLinks").classList.toggle("active");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const skillsSection = document.querySelector(".skills");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          skillsSection.classList.add("visible");
-          observer.unobserve(skillsSection); // Para que se ejecute una sola vez
-        }
-      });
-    },
-    { threshold: 0.5 }
-  ); // Ajusta el umbral según necesites
-
-  observer.observe(skillsSection);
-});
 
 const container = document.querySelector(".hero-image");
 const image = document.getElementById("heroImage");
