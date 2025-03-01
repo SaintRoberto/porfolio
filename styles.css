@@ -184,7 +184,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   :root {
-    --cube-size: 120px; /* Disminuye el tamaño para móviles */
+    --cube-size: 100px; /* Disminuye el tamaño para móviles */
   }
 
   .nav-links {
@@ -194,7 +194,6 @@ footer {
   .hero {
     padding-top: 6rem;
   }
-
 
   .nav-links {
     display: none;
@@ -218,8 +217,7 @@ footer {
     display: flex;
   }
 
-  .card {
-   
+  .card {   
     margin-bottom: 20px!important;
   }
 
