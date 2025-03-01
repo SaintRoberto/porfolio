@@ -195,9 +195,6 @@ footer {
     padding-top: 6rem;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
 
   .nav-links {
     display: none;
@@ -219,6 +216,11 @@ footer {
   /* Muestra el botón hamburguesa */
   .hamburger {
     display: flex;
+  }
+
+  .card {
+   
+    margin-bottom: 20px!important;
   }
 
 }
@@ -310,21 +312,14 @@ footer {
 
 .card {
   position: relative;
-  width: 350px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   margin: 0 auto;
   background: #fff;
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   transition: all 0.3s ease;
-}
-
-.card {
-  position: relative;
-  width: 400px;
-  height: 500px; /* Ajusta el tamaño según sea necesario */
   transform-style: preserve-3d;
-  transition: transform 0.5s;
 }
 
 .face1 {
