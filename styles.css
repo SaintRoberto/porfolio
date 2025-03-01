@@ -213,11 +213,14 @@ footer {
     top: 60px; /* Ajusta este valor según la altura de tu navbar */
     left: 0;
     padding: 10px 0;
+    gap: 0.5rem;
+
   }
 
   /* Muestra el menú cuando tenga la clase "active" */
   .nav-links.active {
     display: flex;
+
   }
 
   /* Muestra el botón hamburguesa */
