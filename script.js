@@ -21,10 +21,4 @@ container.addEventListener("mousemove", (e) => {
   // Para agregar un ligero giro en Z basado en la posición horizontal:
   const rotateZ = ((x - halfWidth) / halfWidth) * 5;
 
-  image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
-});
-
-container.addEventListener("mouseleave", () => {
-  // Reinicia la transformación al salir el mouse
-  image.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
 });
